@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> </title>
+    <script type="text/javascript" src="../../../../QuestionBank/src/main/webapp/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            type:"GET",
+            url:"https://tiku.fenbi.com/api/xingce/questions?ids=2448443",
+            contentType:"application/json",
+            headers: {      //请求头
+                Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                Connection: "keep-alive" ,
+                Cookie: "sid=-5537161398521828573; Hm_lvt_75f573cdde0823f3daac2bac99f1eb2c=1587164994; __utma=48725425.274186689.1587164995.1587164995.1587164995.1; __utmz=48725425.1587164995.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); persistent=WQseE33QeTW+JtKE3pNoAyxQozmElBVqeMLOFH3KLo5sCBRDDE2FmNenMeS6FW5lPdqlrUSwPtdh4QGMVl+zwg==; sess=eo8ALGPhl7Y7imoiOlHyWJRxAwKbI5xxxY1EEQZn1UOboQGyTj57m1Or6szAkDtAvDgSfGA01z3PP6uqxsTK40V/DYCAxOeU+JFefNzLQYk=; userid=67069939"
+            },
+            xhrFields: {withCredentials: true},
+            success:function (data) {
+                console.log("call question/selectQuestion");
+                console.log(data);
+
+            },
+            error:function (e) {
+                openPopup("获取数据失败！");
+                console.log(e);
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
